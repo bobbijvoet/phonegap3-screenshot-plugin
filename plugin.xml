@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="nl.bobbijvoet.screenshot-plugin"
+    version="0.1.0">
+    <name>Screenshot plugin</name>
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="Screenshot">
+                <param name="ios-package" value="Screenshot" />
+            </feature>
+        </config-file>
+        <js-module src="www/Screenshot.js" name="Screenshot">
+            <clobbers target="Screenshot" />
+        </js-module>
+        <header-file src="src/ios/Screenshot.h" />
+	    <source-file src="src/ios/Screenshot.m" />
+    </platform>
+</plugin>
